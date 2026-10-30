@@ -1,0 +1,13 @@
+{
+  "name": "MYTRA — Personal Telemetry",
+  "short_name": "MYTRA",
+  "description": "Personal telemetry for sleep, focus, habits, energy and caffeine.",
+  "start_url": "index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#07090B",
+  "theme_color": "#07090B",
+  "icons": [
+    { "src": "assets/img/favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }
+  ]
+}

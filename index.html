@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+<!-- Primary SEO -->
+<title>MYTRA — For Those Who Intend to Be Great · Sleep, Focus &amp; Habit Telemetry</title>
+<meta name="description" content="MYTRA turns your daily behaviour into personal telemetry. Track sleep, focus, habits, energy and caffeine, and see the patterns that connect them. Free and private.">
+<link rel="canonical" href="https://YOUR-DOMAIN.com/">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="theme-color" content="#07090B">
+<meta name="color-scheme" content="dark">
+
+<!-- Open Graph / social sharing -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="MYTRA">
+<meta property="og:title" content="MYTRA — For those who intend to be great">
+<meta property="og:description" content="Built for athletes, founders, students, creators and engineers. Personal telemetry for sleep, focus, habits and energy, measured against your own baseline.">
+<meta property="og:url" content="https://YOUR-DOMAIN.com/">
+<meta property="og:image" content="https://YOUR-DOMAIN.com/assets/img/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="en_GB">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="MYTRA — For those who intend to be great">
+<meta name="twitter:description" content="Personal telemetry for sleep, focus, habits, energy and caffeine.">
+<meta name="twitter:image" content="https://YOUR-DOMAIN.com/assets/img/og-image.png">
+
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="manifest" href="site.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Saira:wght@300;500;600;700&family=Saira+Condensed:wght@700;800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/site.css">
+<link rel="stylesheet" href="assets/css/hero.css">
+<link rel="stylesheet" href="assets/css/facade.css">
+<script>
+  /* before first paint: mark JS present, and show the boot gate once per session */
+  (function () {
+    var d = document.documentElement; d.classList.add("js");
+    try {
+      if (!sessionStorage.getItem("mytra:boot") && !(window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches)) d.classList.add("xh-booting");
+    } catch (e) {}
+  })();
+</script>
+
+<!-- Structured data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://YOUR-DOMAIN.com/#website",
+      "url": "https://YOUR-DOMAIN.com/",
+      "name": "MYTRA",
+      "alternateName": "My Therapeutic Resource Assistant",
+      "inLanguage": "en"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://YOUR-DOMAIN.com/#app",
+      "name": "MYTRA",
+      "alternateName": "My Therapeutic Resource Assistant",
+      "description": "Personal telemetry for sleep, focus, habits, energy and caffeine. MYTRA reports against your own baseline and surfaces patterns in your own logged data.",
+      "applicationCategory": "LifestyleApplication",
+      "operatingSystem": "Any (web browser)",
+      "url": "https://YOUR-DOMAIN.com/",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+      "featureList": [
+        "Mission control dashboard with a 24-hour timeline",
+        "Focus timer with free-run and Pomodoro modes",
+        "Sleep duration and bedtime consistency tracking",
+        "Caffeine ledger with per-teaspoon dose calculation",
+        "Correlation-based pattern detection with confidence tiers",
+        "Weekly system report",
+        "JSON export and one-step data deletion"
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="home">
+<div class="xh-boot" id="xh-boot" aria-hidden="true">
+  <div class="xh-gantry">
+    <p class="xh-boot-m">MY<span>TRA</span></p>
+    <div class="xh-cal" id="xh-cal">
+      <div class="pod"></div><div class="pod"></div><div class="pod"></div><div class="pod"></div><div class="pod"></div>
+    </div>
+    <p class="xh-boot-l" id="xh-boot-l">Calibrating</p>
+  </div>
+  <p class="xh-boot-skip">Click to skip</p>
+</div>
+<a class="skip" href="#content">Skip to content</a>
+<canvas id="lgrid" aria-hidden="true"></canvas>
+
+<div class="site">
+  <header class="site-hd">
+    <a class="mark" href="index.html" aria-label="MYTRA home">MY<span>TRA</span></a>
+    <span class="tag">Personal Telemetry</span>
+    <span class="sp"></span>
+    <span class="st on"><i></i>System online</span>
+    <a class="btn btn-p btn-sm" href="unavailable.html" data-facade-enter>Open app</a>
+  </header>
+
+  <main id="content">
+    <section class="xh" id="hero" aria-labelledby="hero-title">
+      <canvas class="xh-gl" id="xh-gl" aria-hidden="true"></canvas>
+      <div class="xh-orb" aria-hidden="true"></div>
+      <div class="xh-carbon" aria-hidden="true"></div>
+      <div class="xh-ceil" aria-hidden="true"></div>
+      <div class="xh-floor" aria-hidden="true"></div>
+      <div class="xh-pool" aria-hidden="true"></div>
+      <div class="xh-glow" aria-hidden="true"></div>
+      <div class="xh-atmo" aria-hidden="true"></div>
+      <div class="xh-grain" aria-hidden="true"></div>
+      <div class="xh-frame" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+      <div class="xh-hud" aria-hidden="true">
+        <div class="xh-hud-l">
+          <span><i class="pit"></i>MYT-01 <b>//</b> Live</span>
+          <span>Personal telemetry <b>//</b> v1.0</span>
+        </div>
+        <div class="xh-hud-r">
+          <div class="xh-pw">
+            <div class="xh-pw-hd"><span>Telemetry <b>//</b> Sample</span><span>Session <span class="num" id="xh-sess">00:00.000</span></span></div>
+            <canvas id="xh-trace" width="240" height="46"></canvas>
+            <div class="xh-pw-ft"><span><i class="c1"></i>Focus <span class="num" id="xh-f">--</span></span><span><i class="c2"></i>Energy <span class="num" id="xh-e">--</span></span><span><span class="num" id="xh-fps">60</span> fps</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="xh-ret" aria-hidden="true"><span id="xh-ret-l"></span></div>
+
+      <div class="xh-in">
+        <div class="xh-col">
+          <p class="xh-kick xh-rv">MYTRA is for those who</p>
+          <h1 id="hero-title"><span class="ln"><span>Intend to</span></span> <span class="ln"><span><span class="o">be</span> <span class="great" id="xh-great">great.</span></span></span></h1>
+          <p class="xh-who xh-rv" aria-hidden="true"><span id="xh-pre">For the</span> <b id="xh-word">ATHLETE</b> <span class="l" id="xh-line">recovery, sleep and training load, read together.</span></p>
+          <p class="sr">Built for athletes, founders, students, creators and engineers.</p>
+          <p class="xh-lead xh-rv">MYTRA turns your sleep, focus, energy and habits into a live read-out of how you perform, measured against your own baseline, not a population average.</p>
+          <div class="xh-cta xh-rv">
+            <a class="xh-go" href="unavailable.html" data-facade-enter><span id="xh-go-t">I want to be great</span><i aria-hidden="true">→</i></a>
+            <a class="xh-alt" href="app/index.html?demo=1">See it in action</a>
+          </div>
+          <p class="xh-fine xh-rv">Free · Private · No ads · Your data stays yours</p>
+        </div>
+
+        <aside class="xh-side xh-rv" aria-label="Who MYTRA is for">
+          <div class="xh-tower">
+            <div class="xh-tower-hd"><span class="lbl">Built for</span></div>
+            <ol class="xh-idx">
+              <li><button type="button" data-i="0" aria-pressed="true"><span class="p">01</span><span class="k">ATH</span><span class="nm">Athletes</span></button></li>
+              <li><button type="button" data-i="1" aria-pressed="false"><span class="p">02</span><span class="k">FDR</span><span class="nm">Founders</span></button></li>
+              <li><button type="button" data-i="2" aria-pressed="false"><span class="p">03</span><span class="k">STU</span><span class="nm">Students</span></button></li>
+              <li><button type="button" data-i="3" aria-pressed="false"><span class="p">04</span><span class="k">CRE</span><span class="nm">Creators</span></button></li>
+              <li><button type="button" data-i="4" aria-pressed="false"><span class="p">05</span><span class="k">ENG</span><span class="nm">Engineers</span></button></li>
+            </ol>
+            <div class="xh-fl" aria-hidden="true"><span class="k">YOU</span><span>Your baseline</span></div>
+          </div>
+          <div class="xh-clock" aria-hidden="true">
+            <span class="lbl">Time left today</span>
+            <p class="t" id="xh-clock">--:--<small>:--</small></p>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <ol class="loop" aria-label="How MYTRA works" style="margin-top:56px">
+      <li>Observe</li><li>Log</li><li>Analyse</li>
+      <li>Experiment</li><li>Adapt</li><li>Repeat</li>
+    </ol>
+
+    <section class="lsec" aria-label="Philosophy">
+      <blockquote class="quote"><p>You are the engineer. Your life is the system.<br>MYTRA is the telemetry.</p></blockquote>
+    </section>
+
+    <section class="lsec" aria-labelledby="h-instr">
+      <h2 id="h-instr">Instrumentation, not judgement</h2>
+      <p class="sub">MYTRA reports against <em>your</em> baseline — not a population average, not an arbitrary target. Every number is a reading, not a verdict.</p>
+      <div class="fgrid">
+        <article>
+          <h3>Mission control</h3>
+          <p>Energy, focus, sleep and routine on one panel, with a 24-hour timeline of everything you logged today.</p>
+        </article>
+        <article>
+          <h3>Focus engine</h3>
+          <p>Free-running sessions or Pomodoro cycles that switch phase on their own and record the time for you.</p>
+        </article>
+        <article>
+          <h3>Intelligence engine</h3>
+          <p>Patterns found in your own history, each shown with its sample size and how much confidence it deserves.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="lsec" aria-labelledby="h-data">
+      <h2 id="h-data">Your data belongs to you</h2>
+      <p class="sub">No advertising, no data sale, no third-party analytics. Export everything as JSON at any time, or delete all of it in one step.</p>
+      <div class="warnbox" style="max-width:70ch">
+        <span class="lbl">Not medical software</span>
+        <p>MYTRA supports self-reflection and behaviour change. It does not diagnose, treat or manage any medical or mental-health condition, and it can make mistakes. If you are concerned about your health, consult a qualified physician.</p>
+      </div>
+      <div class="cta" style="margin-top:30px">
+        <a class="btn btn-p" href="unavailable.html" data-facade-enter>Enter MYTRA &nbsp;→</a>
+        <a class="btn" href="app/index.html?demo=1">Try the demo</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-ft">
+    <nav aria-label="Footer">
+      <a href="index.html">Home</a>
+      <a href="unavailable.html" data-facade-enter>Open app</a>
+      <a href="app/index.html?demo=1">Demo</a>
+    </nav>
+    <p class="lbl lbl-dim">MYTRA // Human performance system · v1.0.0</p>
+    <p class="hint">Not medical software. In a crisis, contact your local emergency number.</p>
+  </footer>
+</div>
+
+<script src="assets/js/site/landing.js" defer></script>
+<script src="assets/js/site/hero.js" defer></script>
+<script src="assets/js/site/facade.js" defer></script>
+</body>
+</html>

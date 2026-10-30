@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Mission control · MYTRA</title>
+<meta name="description" content="MYTRA app: log sleep, focus, habits, caffeine and energy, and see the patterns in your own data.">
+<!-- The app is personal and changes per user: keep it out of search results. -->
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#07090B">
+<meta name="color-scheme" content="dark">
+<link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
+<link rel="manifest" href="../site.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Saira:wght@300;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="../assets/css/base.css">
+<link rel="stylesheet" href="../assets/css/app.css">
+<link rel="stylesheet" href="../assets/css/facade.css">
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+<symbol id="i-mission" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.2">
+<circle cx="8" cy="8" r="5.6"/><path d="M8 .8v3M8 12.2v3M.8 8h3M12.2 8h3"/><circle cx="8" cy="8" r="1.4" fill="currentColor" stroke="none"/></symbol>
+<symbol id="i-today" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.2">
+<rect x="1.4" y="2.6" width="13.2" height="12" /><path d="M1.4 6.2h13.2M4.6 1v3M11.4 1v3M5.2 10.2l1.7 1.7 3.6-3.7"/></symbol>
+<symbol id="i-focus" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.2">
+<circle cx="8" cy="9" r="5.8"/><path d="M8 9V5.6M8 9l2.6 1.8M6 1.2h4"/></symbol>
+<symbol id="i-tel" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.2">
+<path d="M1.4 14.6h13.2M1.4 1.4v13.2"/><path d="M3.4 11.4l2.8-3.6 2.6 2 4-6.2"/></symbol>
+<symbol id="i-system" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.2">
+<path d="M1.6 4.4h12.8M1.6 8h12.8M1.6 11.6h12.8"/><circle cx="5" cy="4.4" r="1.6" fill="var(--void)"/><circle cx="10.4" cy="8" r="1.6" fill="var(--void)"/><circle cx="6.4" cy="11.6" r="1.6" fill="var(--void)"/></symbol>
+<symbol id="i-cal" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.2">
+<rect x="1.4" y="2.6" width="13.2" height="12"/><path d="M1.4 6.2h13.2M4.6 1v3M11.4 1v3M4 9h2M7 9h2M10 9h2M4 11.8h2M7 11.8h2"/></symbol>
+</defs></svg>
+
+<a class="skip" href="#main">Skip to content</a>
+
+<!-- ================= BOOT ================= -->
+<div id="boot" role="status" aria-live="polite">
+  <div class="wrap">
+    <div class="mark">MYTRA</div>
+    <div class="ln" id="boot-l1"></div>
+    <div class="ln" id="boot-l2"></div>
+    <div class="ln" id="boot-l3"></div>
+    <div class="bar"><i id="boot-bar"></i></div>
+    <div class="ln" id="boot-l4"></div>
+  </div>
+</div>
+
+<!-- ================= APP ================= -->
+<div id="app" class="hide">
+  <header id="top">
+    <a class="mark" href="../index.html" aria-label="MYTRA website">MY<span>TRA</span></a>
+    <span class="st on" id="sys-st"><i></i><span>Online</span></span>
+    <a id="demo-flag" class="hide" href="../index.html" title="Leave the demo">Demo data · Exit</a>
+    <div class="sp"></div>
+    <div class="dt" id="top-date">—</div>
+    <div class="clk" id="top-clock">--:--:--</div>
+  </header>
+
+  <div id="shell">
+    <nav id="rail" aria-label="Primary">
+      <div class="grp"><span class="lbl lbl-dim">Console</span></div>
+      <a class="nav on" href="#mission" data-view="mission"><svg class="ic" aria-hidden="true"><use href="#i-mission"/></svg>Mission</a>
+      <a class="nav" href="#today" data-view="today"><svg class="ic" aria-hidden="true"><use href="#i-today"/></svg>Today</a>
+      <a class="nav" href="#calendar" data-view="calendar"><svg class="ic" aria-hidden="true"><use href="#i-cal"/></svg>Calendar<span class="soon">Soon</span></a>
+      <a class="nav" href="#focus" data-view="focus"><svg class="ic" aria-hidden="true"><use href="#i-focus"/></svg>Focus</a>
+      <a class="nav" href="#telemetry" data-view="telemetry"><svg class="ic" aria-hidden="true"><use href="#i-tel"/></svg>Telemetry</a>
+      <a class="nav" href="#system" data-view="system"><svg class="ic" aria-hidden="true"><use href="#i-system"/></svg>System</a>
+      <div class="grp" style="padding-top:22px"><span class="lbl lbl-dim">Log</span></div>
+      <button class="nav" data-act="caffeine">＋ Caffeine</button>
+      <button class="nav" data-act="nap">＋ Nap</button>
+      <button class="nav" data-act="sleep">＋ Sleep</button>
+      <button class="nav" data-act="event">＋ Event</button>
+      <div class="foot">
+        <span class="st" id="sync-st"><i></i><span>Local only</span></span>
+        <span class="lbl lbl-dim" id="rail-build">—</span>
+        <a href="../index.html">← Back to website</a>
+      </div>
+    </nav>
+
+    <main id="main" tabindex="-1">
+      <section id="v-mission" class="view"></section>
+      <section id="v-today" class="view hide"></section>
+      <section id="v-calendar" class="view hide"></section>
+      <section id="v-focus" class="view hide"></section>
+      <section id="v-telemetry" class="view hide"></section>
+      <section id="v-system" class="view hide"></section>
+    </main>
+  </div>
+
+  <nav id="bnav" aria-label="Primary mobile">
+    <a class="on" href="#mission" data-view="mission"><svg class="ic" aria-hidden="true"><use href="#i-mission"/></svg>Mission</a>
+    <a href="#today" data-view="today"><svg class="ic" aria-hidden="true"><use href="#i-today"/></svg>Today</a>
+    <a href="#calendar" data-view="calendar"><svg class="ic" aria-hidden="true"><use href="#i-cal"/></svg>Calendar</a>
+    <a href="#focus" data-view="focus"><svg class="ic" aria-hidden="true"><use href="#i-focus"/></svg>Focus</a>
+    <a href="#telemetry" data-view="telemetry"><svg class="ic" aria-hidden="true"><use href="#i-tel"/></svg>Telemetry</a>
+    <a href="#system" data-view="system"><svg class="ic" aria-hidden="true"><use href="#i-system"/></svg>System</a>
+  </nav>
+</div>
+
+<div id="ov" class="hide" role="dialog" aria-modal="true"></div>
+<div id="toast" role="status" aria-live="polite"><div class="b"><span class="st on"><i></i></span><span id="toast-t">Recorded</span></div></div>
+
+<noscript><p style="position:relative;z-index:100;padding:24px">MYTRA needs JavaScript to run. Everything is computed in your browser.</p></noscript>
+
+<!-- Load order matters: each file uses globals from the ones above it. -->
+<script src="../assets/js/core/utils.js" defer></script>
+<script src="../assets/js/core/store.js" defer></script>
+<script src="../assets/js/core/state.js" defer></script>
+<script src="../assets/js/core/analytics.js" defer></script>
+<script src="../assets/js/ui/components.js" defer></script>
+<script src="../assets/js/ui/charts.js" defer></script>
+<script src="../assets/js/app/logging.js" defer></script>
+<script src="../assets/js/app/focus-engine.js" defer></script>
+<script src="../assets/js/app/views/mission.js" defer></script>
+<script src="../assets/js/app/views/today.js" defer></script>
+<script src="../assets/js/app/views/calendar-soon.js" defer></script>
+<script src="../assets/js/app/views/focus.js" defer></script>
+<script src="../assets/js/app/views/telemetry.js" defer></script>
+<script src="../assets/js/app/views/system.js" defer></script>
+<script src="../assets/js/app/demo.js" defer></script>
+<script src="../assets/js/app/main.js" defer></script>
+</body>
+</html>
